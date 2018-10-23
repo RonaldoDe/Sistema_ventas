@@ -14,22 +14,21 @@
             </div>
             @endif
 
-            <form action="{{ url('almacen/categoria') }}" method="POST">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" name="descripcion" class="form-control" placeholder="Descripcion...">
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Guardar</button>
-                    <button class="btn btn-danger" type="reset">Cancelar</button>
-                </div>
-            </form>
-
+        <form action="{{URL::to('/almacen/categoria')}}" method="PATCH">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{$categoria->nombre}}">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" name="descripcion" class="form-control" placeholder="Descripcion..." value="{{$categoria->descripcion}}">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+                <button class="btn btn-danger" type="reset">Cancelar</button>
+            </div>
+        </form>
         </div>
     </div>
 @endsection
