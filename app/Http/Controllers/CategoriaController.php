@@ -45,9 +45,9 @@ class CategoriaController extends Controller
     public function edit($id){
         return view('almacen.categoria.edit', ['categoria'=>Categoria::findOrFail($id)]);
     }
-    public function update(CategoriaFormRequest $request,$id){
+    public function update(Request $request,$id){
         $categoria=Categoria::findOrFail($id);
-        $categoria->nombre=$request->get('nomber');
+        $categoria->nombre=$request->get('nombre');
         $categoria->descripcion=$request->get('descripcion');
         $categoria->update();
 

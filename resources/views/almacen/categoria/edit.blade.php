@@ -14,7 +14,7 @@
             </div>
             @endif
 
-        <form action="{{URL::to('/almacen/categoria')}}" method="PATCH">
+            {{!!Form::open(['action' => ['CategoriaController@update', $categoria->idcategoria], 'method' => 'PATCH'])!!}}
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="nombre">Nombre</label>
@@ -28,7 +28,7 @@
                 <button class="btn btn-primary" type="submit">Guardar</button>
                 <button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
-        </form>
+            {{!!Form::close()!!}}
         </div>
     </div>
 @endsection
