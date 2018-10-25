@@ -1,5 +1,5 @@
 <div class="modal face modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$cat->idcategoria}}">
-    {{!!Form::Open(array('action'=>array('CategoriaController@destroy', $cat->idcategoria), 'method'=>'delete')))!!}}
+    {{!!Form::Open(array('action'=>array('CategoriaController@destroy', $cat->idcategoria), 'method'=>'delete'))!!}}
         <div class="modal-doalig">
             <div class="modal-content">
                 <div class="modal-header">
@@ -15,9 +15,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Confirmat</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
                 </div>
             </div>
         </div>
-    {{!!Form::CLose()!!}}
+    {{!!Form::Close()!!}}
 </div>

@@ -55,12 +55,12 @@ class CategoriaController extends Controller
 
     }
     public function destroy($id){
-        $categoria=Categoria::findOrFial($id);
+        $categoria=Categoria::findOrFail($id);
         $categoria->condicion='0';
         $categoria->update();
 
         
-        return Redirect::to('almacen.categoria');
+        return Redirect::to('almacen/categoria');
         
     }
 }
